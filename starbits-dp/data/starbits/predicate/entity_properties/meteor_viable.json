@@ -1,0 +1,26 @@
+{
+    "condition": "all_of",
+    "terms": [
+        {
+            "condition": "location_check",
+            "predicate": {
+                "dimension": "minecraft:overworld",
+                "can_see_sky": true,
+                "position": {
+                    "y": {
+                        "min": 56
+                    }
+                }
+            }
+        },
+        {
+            "condition": "time_check",
+            "clock": "minecraft:overworld",
+            "period": 24000,
+            "value": {
+                "max": 23000,
+                "min": 13000
+            }
+        }
+    ]
+}

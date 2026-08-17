@@ -1,0 +1,1 @@
+$function starbits:entity/meteor/tick/scale/$(score)

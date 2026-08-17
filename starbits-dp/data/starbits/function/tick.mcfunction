@@ -1,0 +1,1 @@
+execute as @e[type=item_display,tag=starbits.entity.meteor] at @s run function starbits:entity/meteor/tick/start

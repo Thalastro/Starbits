@@ -1,0 +1,12 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "starbits:meteor/red",
+        "tints": [
+            {
+                "type": "constant",
+                "value": 66046
+            }
+        ]
+    }
+}

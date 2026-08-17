@@ -1,0 +1,20 @@
+{
+  "id": "starbits",
+  "pack": {
+    "min_format": [107, 1],
+    "max_format": [107, 1],
+    "description": [
+      {
+        "text": "☄ Starbits ☄",
+        "color": "#6c30d3"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "v1.0 - \"Shine Bright\"",
+        "color": "#67c2fe"
+      }
+    ]
+  }
+}

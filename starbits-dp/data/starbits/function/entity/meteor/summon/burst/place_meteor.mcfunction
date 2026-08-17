@@ -1,0 +1,1 @@
+$execute rotated ~$(yaw) $(pitch) positioned ^ ^ ^200 run execute summon item_display run function starbits:entity/meteor/summon/burst/as_meteor with storage starbits:storage temp

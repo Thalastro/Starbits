@@ -1,0 +1,7 @@
+{
+    "parent": "starbits:meteor/blue",
+	"textures": {
+		"0": "starbits:item/meteor/orange",
+		"particle": "starbits:item/meteor/orange"
+	}
+}
