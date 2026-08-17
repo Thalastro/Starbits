@@ -1,6 +1,6 @@
 scoreboard players remove @s starbits.meteor_burst 1
 
-execute store result storage starbits:storage temp.yaw int 1 run random value -40..40
+execute store result storage starbits:storage temp.yaw int 1 run random value -45..45
 execute store result storage starbits:storage temp.pitch int 1 run random value -60..-35
 function starbits:entity/meteor/summon/set_variant
 

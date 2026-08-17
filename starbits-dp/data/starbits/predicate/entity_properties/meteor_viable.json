@@ -5,7 +5,6 @@
             "condition": "location_check",
             "predicate": {
                 "dimension": "minecraft:overworld",
-                "can_see_sky": true,
                 "position": {
                     "y": {
                         "min": 56
@@ -18,8 +17,8 @@
             "clock": "minecraft:overworld",
             "period": 24000,
             "value": {
-                "max": 23000,
-                "min": 13000
+                "max": 22500,
+                "min": 13500
             }
         }
     ]

@@ -1,1 +1,1 @@
-$execute rotated ~$(yaw) $(pitch) positioned ^ ^ ^200 run execute summon item_display run function starbits:entity/meteor/summon/as_meteor with storage starbits:storage temp
+$execute rotated ~$(yaw) $(pitch) positioned ^ ^ ^190 run execute summon item_display run function starbits:entity/meteor/summon/as_meteor with storage starbits:storage temp

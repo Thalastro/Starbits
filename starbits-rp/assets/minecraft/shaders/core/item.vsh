@@ -1,8 +1,4 @@
 #version 330
-#moj_import <sdk:starbits.glsl>
-#moj_import <sdk:build/item.vsh/header.glsl>
-
-#moj_import <minecraft:globals.glsl>
 
 #moj_import <minecraft:light.glsl>
 #moj_import <minecraft:fog.glsl>
@@ -28,31 +24,26 @@ out vec4 overlayColor;
 
 out vec2 texCoord0;
 
-flat out int sdk_id;
-flat out int sdk_int;
-flat out int sdk_int_b;
-smooth out float sdk_float;
-smooth out vec4 sdk_vec4;
-smooth out vec4 sdk_vec4_b;
-flat out ivec4 sdk_ivec4;
-flat out vec4 sdk_mat4_c0;
-flat out vec4 sdk_mat4_c1;
-flat out vec4 sdk_mat4_c2;
-flat out vec4 sdk_mat4_c3;
-mat4 sdk_mat4 = mat4(0.0);
-uniform sampler2D Sampler0;
-#moj_import <sdk:build/item.vsh/include.glsl>
+bool shouldShade(vec4 color) {
+    return abs(color.r * 255.0 - 254) < 0.5 &&
+        abs(color.g * 255.0 - 251) < 0.5 &&
+        abs(color.b * 255.0 - 254) < 0.5;
+}
+
 void main() {
-    sdk_id = 0; sdk_int = 0; sdk_int_b = 0; sdk_float = 0.0; sdk_vec4 = vec4(0.0); sdk_vec4_b = vec4(0.0); sdk_ivec4 = ivec4(0); sdk_mat4_c0 = vec4(0.0); sdk_mat4_c1 = vec4(0.0); sdk_mat4_c2 = vec4(0.0); sdk_mat4_c3 = vec4(0.0); sdk_mat4 = mat4(0.0);
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 
     sphericalVertexDistance = fog_spherical_distance(Position);
     cylindricalVertexDistance = fog_cylindrical_distance(Position);
 
-    #moj_import <sdk:mixin/starbits/vertex_color.glsl>
-    lightMapColor = sample_lightmap(Sampler2, UV2);
     overlayColor = texelFetch(Sampler1, UV1, 0);
+    lightMapColor = sample_lightmap(Sampler2, UV2);
+
+    if(!shouldShade(Color)) {
+        vertexColor = minecraft_mix_light(Light0_Direction, Light1_Direction, Normal, Color);
+    } else {
+        vertexColor = vec4(1.0);
+    }
 
     texCoord0 = UV0;
-    #moj_import <sdk:build/item.vsh/inject.glsl>
 }

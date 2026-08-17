@@ -1,6 +1,7 @@
-tellraw @a "Starbits Loaded!"
+function starbits:5t_clock
+function starbits:10s_clock
 
-function starbits:1s_clock
+scoreboard players set #starbits.time starbits.meteor 0
 
 scoreboard objectives add starbits.meteor dummy
 scoreboard objectives add starbits.meteor_burst dummy

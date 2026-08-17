@@ -1,1 +1,0 @@
-data modify entity @s transformation.scale set value [1.25,1.25,1.25]

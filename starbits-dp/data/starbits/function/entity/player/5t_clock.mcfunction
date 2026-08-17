@@ -1,0 +1,2 @@
+execute if predicate {condition:"random_chance",chance:0.75} run scoreboard players add @s starbits.meteor 1
+execute if score @s starbits.meteor matches 12.. run function starbits:entity/meteor/summon/start

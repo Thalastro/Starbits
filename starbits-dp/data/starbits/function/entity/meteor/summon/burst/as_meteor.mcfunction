@@ -1,4 +1,4 @@
-execute if entity @a[sort=nearest,limit=1,distance=..50] run return run kill @s
+execute if entity @a[sort=nearest,limit=1,distance=..50,tag=starbits.entity.target] run return run kill @s
 
 tag @s add starbits.entity.meteor
 $data modify entity @s item set value {id:"minecraft:poisonous_potato",components:{"minecraft:item_model":"starbits:meteor/$(variant)"}}
