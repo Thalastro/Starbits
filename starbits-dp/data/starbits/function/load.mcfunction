@@ -1,3 +1,5 @@
+tellraw @a "Starbits Loaded!"
+
 function starbits:5t_clock
 function starbits:10s_clock
 

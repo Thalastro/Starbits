@@ -1,4 +1,4 @@
-execute as @a[distance=0.01..50] unless score @s starbits.meteor matches ..0 run scoreboard players remove @s starbits.meteor 3
+execute as @a[distance=0.01..50] unless score @s starbits.meteor matches ..0 run scoreboard players remove @s starbits.meteor 5
 data remove storage starbits:storage temp
 scoreboard players set @s starbits.meteor 0
 tag @s add starbits.entity.target
