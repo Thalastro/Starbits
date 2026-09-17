@@ -3,6 +3,6 @@ scoreboard players add @s starbits.meteor 1
 
 execute if score @s starbits.meteor matches 30.. run return run kill @s
 
-tp @s ^ ^ ^4.5
+tp @s ^ ^ ^4.35
 execute store result storage starbits:storage temp.score int 1 run scoreboard players get @s starbits.meteor
 function starbits:entity/meteor/tick/macro with storage starbits:storage temp
