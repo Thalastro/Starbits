@@ -1,8 +1,8 @@
 {
   "id": "starbits",
   "pack": {
-    "min_format": [96, 0],
-    "max_format": [96, 0],
+    "min_format": [97, 1],
+    "max_format": [97, 1],
     "description": [
       {
         "text": "☄ Starbits ☄",
